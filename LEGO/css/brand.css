@@ -1,0 +1,636 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* Moblie */
+
+/* Visual */
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.35;
+    font-weight: 280;
+    letter-spacing: 0.25px;
+}
+
+header {height: 700px;}
+
+
+.VisualWrap {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    top: 0; left: 0;
+    background: url(../img/Brand/header_bg_1.jpg) no-repeat center / cover;
+    padding: 50% 0;
+    color: #f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#main_title {
+    width: 85%;
+    margin: 0 7.5% 30px;
+    fill: rgba(255,0,0,0);
+    stroke: #F00;
+    stroke-width: 0.15px;
+}
+
+#main_title .st0.fill{
+    fill: rgba(255,0,0,1);
+    transition: 1.7s; 
+}
+
+.VisualWrap p {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+
+
+
+/* main */
+
+/* Main_Promise */
+
+#Promise {
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/Brand/Promise_bg.jpg) no-repeat bottom / auto 375px;
+}
+
+
+#Promise .txtbox {
+    width: 75%;
+    text-align: center;
+}
+
+#Promise .txtbox h3 {
+    color: #f00;
+    font-size: 6.8rem;
+    margin-bottom: 23px;
+    letter-spacing: -1.6px;
+    -webkit-text-fill-color: #f00; 
+    -webkit-text-stroke: 1px #fff;   
+}
+
+#Promise .txtbox h3.show {
+    text-shadow: -6px 0 0 #a41a1a;
+    transition: 1s;
+}
+
+
+#Promise .txtbox p {
+    color: #fff;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px #111;
+}
+
+#Promise .txtbox p.show {animation: Tl_top 1s .3s both;}
+
+#Promise .txtbox button {
+    background-color: #f00;
+    color: #ffdb00;
+}
+
+#Promise .txtbox button.show {animation: Tl_top 1s .6s both;}
+
+
+/* Main_Content */
+
+#Content {
+    margin-top: 65px;
+    position: relative;
+    overflow: hidden;
+}
+
+#Content .Content_bg {
+    position: absolute;
+    width: 180px;
+    height: 1080px;
+    background: #ffe8e8;
+    z-index: -5;
+    top: 225px; right: 0;
+}
+
+#Content .Content_bg.show {
+    animation: scaleY 5s 0s both;
+    transform-origin:top;
+}
+
+    @keyframes scaleY {
+        0% { opacity: 1; transform: scaleY(0);}
+        100% { opacity: 1; transform: scaleY(1);}
+    }
+
+#Content svg {
+    stroke: #F00;
+    stroke-width: 0.75px;
+    fill: none;
+    width: 175px;
+}
+
+#Content h4 {
+    font-size: 36px;
+    margin-top: -22px;
+    opacity: 0;
+}
+
+#Content h4.show {animation: Tl_top 1s .0s both;}
+
+#Content .text {
+    width: 82%;
+    word-break: break-all;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+#Content .text.show {animation: Tl_top 1s .2s both;}
+
+#Content .Img_box {
+    margin: 25px 0 65px;
+    height: 190px;
+    opacity: 0;
+}
+
+#Content .Img_box.show {animation: Tl_top 1s .4s both;}
+
+.Con_btn {
+    font-size: 1.6rem;
+    position: absolute;
+}
+
+.Con_btn a {
+    color: #f00;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.Con_btn span, .Con_btn span::after {
+    background: #f00;
+    display: block;
+}
+
+.Con_btn span {
+    width: 110px;
+    height: 3px;
+    position: relative;
+    opacity: 0;
+}
+
+.Con_btn span::after {
+    content: "";
+    position: relative;
+    width: 380px;
+    height: 1.5px;
+    top: 0.75px;
+}
+
+
+#Content span.show {animation: scaleX 1s .0s both;}
+.Innovate span.show, .Caring span.show{transform-origin: left;}
+.Environmental span.show {transform-origin: right;}
+
+
+.Innovate, .Environmental, .Caring {
+    position: relative;
+}
+
+.Innovate .title, .Caring .title {
+    text-align: right;
+    margin: 0 10% 65px 0; 
+}
+
+.Innovate .Con_btn, .Caring .Con_btn {
+    top: 200px; left: 9%;
+}
+
+.Innovate .Img_box, .Caring .Img_box {
+    width: 100%;
+    background: url(../img/Brand/Innovate_bg.png) no-repeat center / cover ;
+}
+
+
+.Environmental .title {
+    margin: 0 0 65px 10%; 
+}
+
+.Environmental .Con_btn {
+    top: 195px; right: 9%;
+    text-align: right;
+}
+
+.Environmental span::after {
+    float: right;
+}
+
+.Environmental .Img_box div {
+    display: inline-block;
+    height: 190px;
+    background: url(../img/Brand/Environmental_bg1.jpg) no-repeat center / cover;
+}
+
+.Environmental .Img_box div:nth-child(1) {
+    width: 60%;
+    margin-right: 1%;
+}
+
+.Environmental .Img_box div:nth-child(2) {
+    width: 38%;
+    background-image: url(../img/Brand/Environmental_bg2.jpg);
+}
+
+.Caring .Img_box {
+    background-image: url(../img/Brand/Caring_bg.jpg);
+}
+
+
+/* History */
+
+#History {
+    position: relative;
+    height: 520px;
+}
+
+#History h3{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    font-size: 5.3rem;
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke: 1px #f00;
+}
+
+#History h3:nth-child(1) {
+    margin-top: 30px;
+    -webkit-text-fill-color: #f00;
+}
+
+
+#History h3:nth-child(2) {
+    opacity: 0;
+}
+
+#History h3.show:nth-child(2) {
+    animation: Tl_top_his1 .5s 0s both;
+}
+
+#History h3:nth-child(3) {
+    opacity: 0;
+}
+
+#History h3.show:nth-child(3) {
+    animation: Tl_top_his2 .5s 0s both;
+}
+
+
+    @keyframes Tl_top_his1 {
+        0% { opacity: 0; transform: translateY(-40px);}
+        100% { opacity: .5; transform: translateY(-80px);}
+    }
+
+    @keyframes Tl_top_his2 {
+        0% { opacity: 0; transform: translateY(-40px);}
+        100% { opacity: .2; transform: translateY(-160px);}
+    }
+
+
+.History_list {
+    position: relative;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-left: 10%;
+    margin-top: -4px;
+    z-index: 2;
+}
+
+.History_list li {
+    margin-bottom: 18px;
+}
+
+.History_list a {
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke: 0.8px #f00;
+    line-height: 1;
+}
+
+.History_list .on{
+    -webkit-text-fill-color: #f00;
+    font-size: 2.6rem;
+}
+
+
+.H_panel {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 485px;
+    top: 45px;
+    padding: 110px 5% 0;
+}
+
+#list01 {
+    background: url(../img/Brand/History_bg_1930.jpg)no-repeat -140px 0 / cover;
+}
+
+#list02 {
+    background: url(../img/Brand/History_bg_1950.jpg)no-repeat center/ cover;
+}
+#list03 {
+    background: url(../img/Brand/History_bg_1970.jpg)no-repeat center/ cover;
+}
+#list04 {
+    background: url(../img/Brand/History_bg_1990.jpg)no-repeat center/ cover;
+}
+#list05 {
+    background: url(../img/Brand/History_bg_2010.jpg)no-repeat -140px 0/ cover;
+}
+
+.H_panel .TextWrap {
+    text-align: left;
+    padding-left: 35%;
+    line-height: 1.15;
+}
+
+.H_panel .title h4, .H_panel .title b {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.H_panel h4.show {animation: Tl_top .4s 0s both;}
+.H_panel b.show {animation: Tl_top .4s .2s both;}
+.H_panel p.show {animation: Tl_top .4s .4s both;}
+
+.H_panel .title p {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.H_panel button {
+    margin-top: 50px;
+    background: #f00;
+    color: #ffdb00;
+}
+
+.H_panel button.show {animation: Tl_top .4s .6s both;}
+
+.footerWrap .imgbox {
+    background: url(../img/Brand/footer_bg.jpg) no-repeat center /cover;
+}
+
+/* keyframes */
+
+/* Tablet */
+@media screen and (min-width:768px){
+
+    /* Tablet common */    
+    button {width: 200px; height: 48px; font-size: 1.6rem; cursor: pointer;}
+    p {line-height: 1.45;}
+
+    header {height: 968px;}
+    .VisualWrap {height: 968px;}
+    #main_title {width: 100%; margin: 0 0% 30px;}
+
+    .VisualWrap p {font-size: 2.4rem; line-height: 1.4;}
+
+
+    /* Tablet_main */
+    /* Main_Promise */
+
+    #Promise {
+        height: 968px;
+        background: url(../img/Brand/Promise_bg.jpg) no-repeat 0 484px / 100%;
+    }
+
+
+    #Promise .txtbox {width: 80%;}
+    #Promise .txtbox h3 {font-size: 9.5rem; margin-bottom: 35px;}
+    #Promise .txtbox h3.show {text-shadow: -8px 0 0 #a41a1a;}
+    #Promise .txtbox p {margin-bottom: 35px; font-size: 2.2rem;}
+
+
+
+    /* Main_Content */
+
+    #Content {margin-top: 70px; height: 1965px;}
+    #Content .Content_bg {
+        width: 44%;
+        height: 1230px;
+        top: 550px; right: 0;
+    }    
+    #Content .Content_bg.show {animation: scaleY 7s 0s both;}
+    #Content svg {width: 190px;}
+    #Content h4 {font-size: 4.3rem; margin-top: -22px;}
+    .Con_btn {font-size: 2.2rem;}
+    .Con_btn a {line-height: 38px;}
+    .Con_btn span {width: 150px;}
+    .Con_btn span::after {width: 420px;}  
+    #Conten .Img_box {margin: 30px 0 65px;}  
+    .Innovate .title, .Caring .title {text-align:left; margin: 0 0 35px 10%;}
+    .Environmental .title {text-align: right; margin: 0 10% 35px 0;}
+
+
+    #Content .Innovate .text{width: 450px; margin-left: 10%;}
+    #Content .Innovate .Img_box {height: 250px; width: 670px;}
+    .Innovate .Con_btn {top: 160px; right:33%; left: auto;}
+
+
+    #Content .Environmental .text {width: 70%; margin-right: 10%; text-align: right;}
+    .Environmental .Con_btn {top: 163px; right: 55%;}s
+    .Environmental .Img_box div {height: 215px;}
+    .Environmental .Img_box div:nth-child(1) {
+        width: 41%;
+        margin-right: 1%;
+        margin-left: 8%;
+    }
+    .Environmental .Img_box div:nth-child(2) {width: 41%;}
+
+
+    #Content .Caring .title {padding-top: 64px;}
+    #Content .Caring .text {width: 50%; margin-left: 10%; z-index: 1;}  
+    #Content .Caring .Img_box {
+        width: 50%;
+        height: 516px;
+        float: right;
+        right: 9%;
+        margin-top: -58%;
+        z-index: -1;
+        position: absolute;
+    }
+    #Content .Caring .Con_btn {top: 460px; left: 10%;}
+
+
+
+    /* History */
+
+    #History {height: 670px;}
+    #History h3{font-size: 9.8rem; -webkit-text-stroke: 1.25px #f00;}
+
+        @keyframes Tl_top_his1 {
+            0% { opacity: 0; transform: translateY(-100px);}
+            100% { opacity: .5; transform: translateY(-140px);}
+        }
+
+        @keyframes Tl_top_his2 {
+            0% { opacity: 0; transform: translateY(-100px);}
+            100% { opacity: .2; transform: translateY(-280px);}
+        }
+
+    .History_list {font-size: 3rem; margin-top: -90px;}
+    .History_list li {margin-bottom: 28px;}
+    .History_list .on{font-size: 3.6rem;}
+
+
+    .H_panel {
+        height: 610px;
+        top: 60px;
+        padding: 140px 5% 0;
+    }
+
+    #list01 {background: url(../img/Brand/History_bg_1930.jpg)no-repeat center/ cover;}
+    #list05 {background: url(../img/Brand/History_bg_2010.jpg)no-repeat center/ cover;}
+    .H_panel .title h4, .H_panel .title b {font-size: 2.6rem; margin-bottom: 20px;}
+    .H_panel .title p {font-size: 2rem; line-height: 1.6;}
+       
+}
+
+
+
+
+/* PC */
+@media screen and (min-width:960px){
+        .pc {display: block;}
+        .moblie {display: none;}
+
+    .VisualWrap {
+    background: url(../img/Brand/header_bg_1.jpg) no-repeat center / cover;
+    background-attachment: fixed;
+    padding: 0;
+    }
+
+    .VisualWrap .txtbox{width: 580px;}
+    #main_title {
+    margin: 0 auto 50px;
+    fill: rgba(255,0,0,0);
+    stroke: #F00;
+    stroke-width: 0.15px;
+    }
+    .VisualWrap p {
+        text-align: center;
+        font-size: 2.6rem;
+    }
+    
+    /* main */
+    /* PC_Main_Promise */
+
+    #Promise {
+        height: 900px;
+        background: url(../img/Brand/Promise_bg.jpg) no-repeat 0 450px / 100%;
+    }
+
+    #Promise .txtbox {width: 800px;}
+    #Promise .txtbox h3 {font-size: 11.5rem; margin-bottom: 35px;}
+    #Promise .txtbox h3.show {text-shadow: -10px 0 0 #a41a1a;}
+    #Promise .txtbox p {
+        width: 650px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    #Promise .txtbox button {background-color: #f00; color: #ffdb00;}
+    #Promise .txtbox button:hover {background-color: #ffdb00; color:#f00;}    
+
+
+
+    
+/* Main_Content */
+
+    #Content {padding-top: 125px; width: 1024px; margin: 0 auto; height: 2300px;}
+    #Content .Content_bg {
+        width: 40%;
+        height: 1526px;
+        top: 493px;
+    }
+
+    #Content .Content_bg.show {animation: scaleY 5s 0s both;}
+    #Content svg {width: 300px;}    
+    #Content h4 {font-size: 6rem; line-height: 1.2; margin-top: -45px;}
+    #Content .Img_box {margin: 0;}
+    .Con_btn span::after {width: 600px;}
+
+    #Content .Innovate .text {
+        width: 450px;
+        position: absolute;
+        top: 170px; right: 80px;
+    }
+
+    #Content .Innovate .Img_box {
+        margin: 40px 0 65px;
+        width: 760px;
+        height: 280px;
+    }    
+
+    .Innovate .Con_btn {top: 350px; right:8%; left: auto;}
+        .Environmental {height: 925px;}
+        .Environmental .title {float: left; display: inline; margin: 160px 0 35px 7.5%;}
+        #Content .Environmental .text {width: 40%; margin: 0 0 0 10%; float: left;}
+        .Environmental .Con_btn {top: 685px; right: 50%;}
+        .Environmental .Img_box {position: absolute; width: 50%; top: -30px; right: -40px;}
+        .Environmental .Img_box div:nth-child(1) {
+            height: 390px;
+            width: 100%;
+            margin-bottom: 20px;
+            margin-right: 0;
+            margin-left: 0;
+        }
+    .Environmental .Img_box div:nth-child(2) {height: 210px; width: 315px;}
+    
+    
+    #Content .Caring .title {width: 470px; padding-top: 0; float:right; margin: -260px 0 35px 10%;}
+    #Content .Caring .text {float:right; width: 390px; margin-right: 7%; z-index: 1;}
+    #Content .Caring .Img_box {
+            width: 375px;
+            height: 520px;
+            float: left;
+            margin-left: 13%;
+            margin-top: -38%;
+            z-index: -1;
+            position: static;
+        }
+    #Content .Caring .Con_btn {top: 350px; left: 555px;}
+
+
+    /* History */
+    #History {height: 670px;}
+    #History h3{font-size: 12rem; -webkit-text-stroke: 1.5px #f00;}
+
+            @keyframes Tl_top_his1 {
+                0% { opacity: 0; transform: translateY(-100px);}
+                100% { opacity: .5; transform: translateY(-180px);}
+            }
+
+            @keyframes Tl_top_his2 {
+                0% { opacity: 0; transform: translateY(-100px);}
+                100% { opacity: .2; transform: translateY(-360px);}
+            }
+    .History_list {margin-top: -134px; margin-left: 20%;} 
+    .H_panel p.pc {margin-top: 30px;}
+    .H_panel {
+        height: 610px;
+        top: 60px;
+        padding: 140px 15% 0;
+    }
+
+    
+    /* Footer */
+    .footerWrap .imgbox {
+    background: url(../img/Brand/footer_bg.jpg) no-repeat center /cover;
+    background-attachment: fixed;
+    
+}
