@@ -509,13 +509,16 @@ header {height: 700px;}
         .pc {display: block;}
         .moblie {display: none;}
 
+    header {height: 100vh;}
+    
     .VisualWrap {
     background: url(../img/Brand/header_bg_1.jpg) no-repeat center / cover;
     background-attachment: fixed;
     padding: 0;
+    height: 100vh;
     }
 
-    .VisualWrap .txtbox{width: 580px;}
+    .VisualWrap .txtbox{width: 480px;}
     #main_title {
     margin: 0 auto 50px;
     fill: rgba(255,0,0,0);
@@ -524,15 +527,15 @@ header {height: 700px;}
     }
     .VisualWrap p {
         text-align: center;
-        font-size: 2.6rem;
+        font-size: 2.2rem;
     }
     
     /* main */
     /* PC_Main_Promise */
 
     #Promise {
-        height: 900px;
-        background: url(../img/Brand/Promise_bg.jpg) no-repeat 0 450px / 100%;
+        height: 800px;
+        background: url(../img/Brand/Promise_bg_PC.jpg) no-repeat 0 400px / 100%;
     }
 
     #Promise .txtbox {width: 800px;}
@@ -551,19 +554,21 @@ header {height: 700px;}
     
 /* Main_Content */
 
-    #Content {padding-top: 125px; width: 1024px; margin: 0 auto; height: 2300px;}
+    #Content {padding-top: 125px; width: auto; margin: 0 auto; height: 2350px;}
     #Content .Content_bg {
         width: 40%;
-        height: 1526px;
-        top: 493px;
+        height: 1633px;
+        top: 513px;
     }
 
     #Content .Content_bg.show {animation: scaleY 5s 0s both;}
     #Content svg {width: 300px;}    
     #Content h4 {font-size: 6rem; line-height: 1.2; margin-top: -45px;}
     #Content .Img_box {margin: 0;}
-    .Con_btn span::after {width: 600px;}
+    .Con_btn span::after {width: 750px;}
 
+    #Content .container { position: relative; width: 1024px; margin: 0 auto; }
+    
     #Content .Innovate .text {
         width: 450px;
         position: absolute;
@@ -576,7 +581,7 @@ header {height: 700px;}
         height: 280px;
     }    
 
-    .Innovate .Con_btn {top: 350px; right:8%; left: auto;}
+    .Innovate .Con_btn {top: 350px; right:21%; left: auto;}
         .Environmental {height: 925px;}
         .Environmental .title {float: left; display: inline; margin: 160px 0 35px 7.5%;}
         #Content .Environmental .text {width: 40%; margin: 0 0 0 10%; float: left;}
@@ -622,7 +627,7 @@ header {height: 700px;}
     .History_list {margin-top: -134px; margin-left: 20%;} 
     .H_panel p.pc {margin-top: 30px;}
     .H_panel {
-        height: 610px;
+        height: 590px;
         top: 60px;
         padding: 140px 15% 0;
     }

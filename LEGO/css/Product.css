@@ -51,7 +51,7 @@ header {height: 700px;}
 }
 
 .VisualWrap ul li a{
-    font-weight: 200;
+    font-weight: 300;
     font-size: 1.8rem;
     line-height: 15px;
     border: 1px solid #fff;
@@ -182,10 +182,6 @@ header {height: 700px;}
 
 .InnerWrap .like.show {animation: Tl_top 0.3s .075s both;}
 
-.InnerWrap .like:hover svg {
-    fill: #f00;
-    transition: 0.5s;
-}
 
 .InnerWrap .like svg {
     fill: transparent;
@@ -427,20 +423,20 @@ header {height: 700px;}
 @media screen and (min-width:960px){
         .pc {display: block;}
         .moblie {display: none;}
-
+    header {height: 100vh;}
     .container {display: inline;}
     
     .VisualWrap {
-        height: 968px;
+        height: 100vh;
         padding: 0;
-        background: url(../img/Product_Marvel/header_bg_1.jpg) no-repeat 50% -250px / cover;
+        background: url(../img/Product_Marvel/header_bg_1.jpg) no-repeat 50% 0 / cover;
         background-attachment: fixed;
     }
-    .VisualWrap .txtbox {width: 580px;}
+    .VisualWrap .txtbox {width: 500px;}
     #main_title {width: 100%; margin: 0 0 50px;}
 
     .VisualWrap ul {text-align: center;}
-    .VisualWrap ul li a{ font-size: 2.4rem; padding: 5px 30px; } 
+    .VisualWrap ul li a{ font-size: 2rem; padding: 5px 30px; } 
 
     
     .panel { width: 49.88%; display: inline-block;}
@@ -459,7 +455,10 @@ header {height: 700px;}
     .InnerWrap #Vulture { margin-left: 30%; }
     
     
-    
+    .InnerWrap .like:hover svg {
+    fill: #f00;
+    transition: 0.5s;
+    }
     /* info */
 
     .InnerWrap.info .star svg { width: 20px; margin-right: 2.5px;}

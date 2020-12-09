@@ -37,7 +37,7 @@
 @media screen and (min-width:960px){
      
     .VisualWrap {
-        background: url(../img/Product_Architecture/header_bg_Architeture.jpg) no-repeat 50% -250px / cover;
+        background: url(../img/Product_Architecture/header_bg_Architeture.jpg) no-repeat 50% 0 / cover;
         background-attachment: fixed;
     }
     

@@ -16,6 +16,7 @@ body {line-height: 1; font-family: 'Noto Sans KR', sans-serif ;}
 .clear:after {content: ""; clear: both; display: block;}
 .blind {position: absolute; top: -9999px; left: -9999px;}
 .pc {display: none;}
+body::-webkit-scrollbar {width: 0px;} /* 스크롤바 */
 
 /* Moblie common */
 button {width: 115px; height: 40px; border: none; background: #ffdb00; color: #ff0000; font-size: 1.3rem; font-weight: 700; cursor: pointer;}
@@ -110,6 +111,12 @@ nav {
     opacity: .99;
     visibility: visible;
 }
+
+.on nav .navInner li:nth-child(1) {animation: Tl_left .5s .25s both;}
+.on nav .navInner li:nth-child(2) {animation: Tl_left .5s .35s both;}
+.on nav .navInner li:nth-child(3) {animation: Tl_left .5s .45s both;}
+.on nav .navInner li:nth-child(4) {animation: Tl_left .5s .55s both;}
+
 
 .navInner {
     text-align: center;
@@ -208,11 +215,17 @@ nav {
 .footerWrap .site > div {width: 40%; height: 37px; margin: 20px 0; position: relative;}
 .footerWrap .site .Txtwrap {float: left;}
 .footerWrap .site svg {width: 4vw; float: right; fill: #f00; position: absolute; top: 0;
- bottom: 0; right: 0; margin: auto 0;}
+ bottom: 0; right: 0; margin: auto 0; transform:translateX(-10px);}
 
 .footerWrap b {font-size: 3.8vw; margin-bottom: 8px;}
-.footerWrap p {font-size: 2.85vw; line-height: 120%;}
+.footerWrap p {font-size: 2.85vw; line-height: 120%; font-weight: 300; color: #cbcbcb; }
 .footerWrap .site span {width: 1.5px; height: 37px; background: #dbdbdb; margin: 20px 6.66vw;}
+
+/* hover */
+.footerWrap .site div:hover svg {transform: translateX(0); transition: 1s;}
+.footerWrap .site div:hover b { color: #f00; transition: .7s;}
+.footerWrap .site div:hover p { color: #1a1a1a; transition: .7s;}
+
 
 .footerWrap .imgbox, .footerWrap .information {
     width: 100%;
@@ -277,7 +290,7 @@ nav {
 
     .navInner {font-size: 8rem;}
     .navInner a {-webkit-text-stroke: 1.5px #f00;}
-    .navInner a::before {top: 8vh;}
+    .navInner a::before {top: 80px;}
 
 
 /* footer */
@@ -310,9 +323,9 @@ nav {
     
     
     /* nav.on */
-    .navInner {font-size: 9rem;}
+    .navInner {font-size: 8.5rem;}
     .navInner li {margin-bottom: 4.35vh;}
-    .navInner a::before {top: 95px;}
+    .navInner a::before {top: 90px;}
 
 
 
@@ -329,6 +342,9 @@ nav {
     .footerWrap p {font-size: 1.5rem;}
     .footerWrap .site span {width: 2px; height: 50px; margin: 20px 2vw;}
 
+
+  
+    
     .footerWrap .imgbox {background: url(../img/footer_bg.png) no-repeat center 75% /100% auto;
     background-attachment: fixed;
     }

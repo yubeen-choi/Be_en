@@ -26,8 +26,7 @@ $(document).ready(function(){
 
     
     //vivus
-    let type1 = {duration: 50, type: 'sync'};
-    
+        
     let ProductTitle = new Vivus('main_title', {duration: 60, type: 'sync' }, function(){$('#main_title').find('.st0').addClass('fill');});
   
     
