@@ -1,0 +1,71 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* Moblie */
+
+/* Visual */
+
+
+.VisualWrap {
+    background: url(../img/Product_Architecture/header_bg_Architeture.jpg) no-repeat center / cover;
+}
+
+.VisualWrap ul li a.on { color: #9000ff;}
+.VisualWrap ul li a:hover { color: #9000ff;}
+
+
+.VisualWrap {
+    background: url(../img/Product_Technic/header_bg_Technic.jpg) no-repeat center / cover;
+}
+
+
+
+.VisualWrap ul li a.on { color: #0048ff;}
+.VisualWrap ul li a:hover { color: #0048ff;}
+
+/* main */
+
+.InnerWrap img { height: 150px; margin-top: 50px;}
+
+
+/* info */
+
+/* keyframes */
+
+/* Tablet */
+@media screen and (min-width:768px){
+
+    /* Tablet_main */
+    .InnerWrap img { height: 230px;}
+   
+}
+
+
+
+/* min-width 960 */
+@media screen and (min-width:960px){
+     
+    .VisualWrap {
+        background: url(../img/Product_Technic/header_bg_Technic.jpg) no-repeat 50% 0 / cover;
+        background-attachment: fixed;
+    }
+    
+    .InnerWrap img { height: 190px;}
+    
+}
+
+
+
+/* PC */
+@media screen and (min-width:1200px){
+
+    .container {display: block;}
+    .VisualWrap {
+        background: url(../img/Product_Technic/header_bg_Technic.jpg) no-repeat 50% 0 / cover;
+        background-attachment: fixed;
+    }
+    
+    .InnerWrap img { height: 180px;}
+
+    
+}

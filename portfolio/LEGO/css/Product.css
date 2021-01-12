@@ -1,0 +1,546 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* Moblie */
+
+/* Visual */
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.35;
+    font-weight: 280;
+    letter-spacing: 0.25px;
+}
+
+
+header {height: 700px;}
+
+.navBtn span, .navBtn span::after, .navBtn span::before{background:#fff;}
+.on .navBtn span::after,.on .navBtn span::before {background:#f00;}
+
+.VisualWrap {
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    top: 0; left: 0;
+    background: url(../img/Product_Marvel/header_bg_1.jpg) no-repeat center / cover;
+    padding: 50% 0;
+    color: #f00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#main_title {
+    width: 86%;
+    margin: 0 7.5% 45px;
+    fill: rgba(255,0,0,0);
+    stroke: #fff;
+    stroke-width: 0.15px;
+}
+
+#main_title .st0.fill{
+    fill: rgba(255,255,255);
+    transition: 1.7s; 
+}
+
+
+.VisualWrap li {
+    display: inline;
+}
+
+.VisualWrap ul li a{
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 15px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 3px 15px;
+    margin: 0 3px;
+    color: #fff;
+}
+
+
+.VisualWrap ul li a:hover {
+    color: #f00;
+    background: #fff;
+    transition: .5s;
+}
+
+.VisualWrap ul li a.on  {
+    color: #f00;
+    background: #fff;
+    font-weight: 500;
+}
+
+
+
+/* main */
+.container {display: block;}
+.panel {
+    width: 100%;
+    height: 610px;
+    position: relative;
+}
+
+.InnerWrap {
+    overflow: hidden;
+    width: 100vw;
+    height:607px;
+}
+
+.InnerWrap.current {
+    background: #f7f7f7;
+    padding-bottom: 65px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.InnerWrap .txtbox {
+    width: 75%;
+    text-align: center;
+    margin: 85px 0 30px;
+}
+
+.InnerWrap .txtbox h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    opacity: 0;
+}
+
+.InnerWrap .txtbox h3.show {animation: Tl_top 0.5s .1s both;}
+
+.InnerWrap .txtbox p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    opacity: 0;
+}
+
+.InnerWrap .txtbox p.show {animation: Tl_top 0.5s .2s both;}
+
+.InnerWrap .btnbox {
+    width: 210px;
+}
+
+.InnerWrap button {
+    background: #f7f7f7;
+    border: 1px solid #f00;
+    width: 220px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    color: #f00;
+    font-size: 1.6rem;
+    font-weight: 300;
+    opacity: 0;
+}
+
+.InnerWrap .btnbox button:nth-child(1).show {animation: Tl_top 0.5s .3s both;}
+.InnerWrap .btnbox button:nth-child(2).show {animation: Tl_top 0.5s .4s both;}
+
+.InnerWrap .btnbox button:hover, .InnerWrap.info .bottom button:hover {
+    transition: .5s;
+    background: #f00;
+    color: #fff;
+    font-weight: 500;
+}
+
+.InnerWrap button a{color: #f00;}
+
+.InnerWrap img {
+    width: auto;
+    height: 160px;
+    margin-top: 50px;
+}
+
+.InnerWrap img.show {animation: Tl_top 0.5s .5s both;}
+
+.con4 .InnerWrap img {
+    height: 185px;
+    margin-top: 27px;
+    margin-left: 5%;
+    opacity: 0;
+}
+
+.InnerWrap #Vulture {
+    margin-left: 30%;
+}
+
+.InnerWrap .like {
+    position: absolute;
+    background: none;
+    border: none;
+    top: 25px;
+    right: 5%;
+    width: 30px;
+    opacity: 0;
+}
+
+.InnerWrap .like.show {animation: Tl_top 0.3s .075s both;}
+
+
+.InnerWrap .like svg {
+    fill: transparent;
+    stroke: #f00;
+    stroke-width: 30px;
+}
+
+.InnerWrap .like svg.on {
+    fill: #f00;
+    animation: click .7s 0s both;
+}
+
+@keyframes click {
+    0%{opacity: 0; transform: scale(0);}
+    50%{opacity: 0.5; transform: scale(1.5);}
+    110%{opacity: 1; transform: scale(1);}
+}
+
+
+
+
+/* info */
+
+.InnerWrap.info {
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    padding: 50px 10%;
+    display: none;
+}
+.InnerWrap.info.on {
+    display: block;
+    animation: opcitiy_1 .3s 0s both;
+}
+
+
+.InnerWrap.info .toggle {
+    background: none;
+    border: none;
+    position: absolute;
+    width: 30px;
+    top: 25px;
+    right: 5%;
+}
+
+.InnerWrap.info .toggle svg {
+    fill: #f00;
+    height: 25px;
+}
+
+.InnerWrap.info.on .toggle {animation: Tl_top 0.4s .05s both;}
+
+.InnerWrap.info .star {
+    margin-top: 50px;
+}
+
+.InnerWrap.info.on .star {animation: Tl_top 0.4s .1s both;}
+
+.InnerWrap.info .star svg {
+    width: 20px;
+    fill: #f00;
+    margin-right: 2.5px;
+}
+
+.InnerWrap.info #star4 svg:nth-child(5) {
+    fill: transparent;
+    stroke: #f00;
+    stroke-width: 20px;
+}
+
+.InnerWrap.info #star3 svg:nth-child(4), .InnerWrap.info #star3 svg:nth-child(5) {
+    fill: transparent;
+    stroke: #f00;
+    stroke-width: 20px;
+}
+
+.InnerWrap.info h3 {
+    font-size: 2rem;
+    line-height: 2;
+}
+
+.InnerWrap.info.on h3 {animation: Tl_top 0.4s .2s both;}
+
+.InnerWrap.info p {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    word-break: break-all;
+}
+
+.InnerWrap.info.on p {animation: Tl_top 0.4s .6s both;}
+
+.InnerWrap.info .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1.5px solid #111;
+    border-bottom: 1px solid #111;
+    margin: 20px 0;
+}
+
+.InnerWrap.info .icon div{
+    margin: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.InnerWrap.info .icon svg {
+    width: 28px;
+    stroke: #f00;
+    stroke-width: 30px;
+    fill: transparent;
+}
+
+.InnerWrap.info.on .icon svg {animation: Tl_top 0.4s .3s both;}
+
+.InnerWrap.info .icon #Item {
+    fill: #f00;
+    stroke: none;
+}
+
+.InnerWrap.info .icon div b {
+    font-size: 1.6rem;
+    margin: 15px 0;
+}
+
+.InnerWrap.info.on .icon b {animation: Tl_top 0.4s .4s both;}
+
+.InnerWrap.info .icon div p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.InnerWrap.info.on .icon p {animation: Tl_top 0.4s .5s both;}
+
+.InnerWrap.info .bottom {
+    margin-top: 26px;
+}
+
+.InnerWrap.info .bottom b{
+    display: inline;
+    font-size: 2.2rem;
+    line-height: 50px;
+}
+
+.InnerWrap.info.on .bottom b {animation: Tl_top 0.4s .7s both;}
+
+.InnerWrap.info .bottom button {
+    width: 160px;
+    background: #fff;
+    float: right;
+}
+
+.InnerWrap.info.on .bottom button {animation: Tl_top 0.4s .8s both;}
+
+.footerWrap .imgbox {
+    background: url(../img/Product_Marvel/footer_bg.jpg) no-repeat center /200%;
+}
+
+/* keyframes */
+
+/* Tablet */
+@media screen and (min-width:768px){
+
+    /* Tablet common */    
+    
+    p {line-height: 1.45;}
+
+    header {height: 968px;}
+    .VisualWrap {height: 968px;}
+    #main_title {width: 100%; margin: 0 0 50px;}
+
+
+    .VisualWrap ul li a{
+        font-size: 2.2rem;
+        padding: 5px 25px;
+        margin: 0 5px;
+    } 
+
+    
+    
+    /* Tablet_main */
+    
+    .panel { height: 650px;}
+
+    .InnerWrap { height: 647px;}
+    .InnerWrap.current {padding-bottom: 80px;}
+    .InnerWrap .txtbox { width: 70%;}
+    .InnerWrap .txtbox h3 {
+        font-size: 2.4rem;
+        margin-bottom: 20px;
+    }
+
+    .InnerWrap .txtbox p {font-size: 1.8rem;}
+    .InnerWrap .btnbox {width: 453px;}
+    .InnerWrap  button {font-size: 1.8rem;}
+    .InnerWrap .btnbox button:nth-child(1) {margin-right: 10px;}    
+
+
+    .InnerWrap img { height: 220px; margin-top: 65px;}
+    .con4 .InnerWrap img { height: 275px;}
+    .InnerWrap #Vulture { margin-left: 20%; }
+    .InnerWrap .like { top: 40px; width: 40px; }
+
+
+
+    /* info */
+
+    .InnerWrap.info .toggle { width: 40px; top: 40px; }
+    .InnerWrap.info .star {
+        margin-top: 30px;
+    }
+
+    .InnerWrap.info .star svg { width: 25px; margin-right: 3px;}
+
+    .InnerWrap.info h3 { font-size: 2.4rem; line-height: 2.5;}
+
+    .InnerWrap.info p { font-size: 1.8rem; }
+
+    .InnerWrap.info .icon { margin: 25px 0;}
+    .InnerWrap.info .icon div{ margin: 30px 40px;}
+    .InnerWrap.info .icon svg { width: 35px; height: 50px;}
+    .InnerWrap.info .icon div b {font-size: 2rem;}
+    .InnerWrap.info .icon div p {font-size: 2rem;}
+
+    .InnerWrap.info .bottom { margin-top: 35px;}
+    .InnerWrap.info .bottom b{ font-size: 3rem;}
+    .InnerWrap.info .bottom button { width: 220px;}
+    
+
+}
+
+
+
+/* min-width 960 */
+@media screen and (min-width:960px){
+        .pc {display: block;}
+        .moblie {display: none;}
+    header {height: 100vh;}
+    .container {display: inline;}
+    
+    .VisualWrap {
+        height: 100vh;
+        padding: 0;
+        background: url(../img/Product_Marvel/header_bg_1.jpg) no-repeat 50% 0 / cover;
+        background-attachment: fixed;
+    }
+    .VisualWrap .txtbox {width: 500px;}
+    #main_title {width: 100%; margin: 0 0 50px;}
+
+    .VisualWrap ul {text-align: center;}
+    .VisualWrap ul li a{ font-size: 2rem; padding: 5px 30px; } 
+
+    
+    .panel { width: 49.88%; display: inline-block;}
+    .InnerWrap { width: 100%;}
+    
+    .InnerWrap .txtbox { width: 70%;}
+    .InnerWrap .txtbox h3 { font-size: 1.8rem; line-height: 1.5;}
+    .InnerWrap .txtbox p {font-size: 1.6rem; line-height: 1.4;}
+    
+    .InnerWrap .btnbox {width: 210px;} 
+    .InnerWrap  button {font-size: 1.6rem;}
+    .InnerWrap .btnbox button:nth-child(1) {margin-right:0;} 
+
+    .InnerWrap img { height: 180px; margin-top: 35px;}
+    .con4 .InnerWrap img { height: 210px;}
+    .InnerWrap #Vulture { margin-left: 30%; }
+    
+    
+    .InnerWrap .like:hover svg {
+    fill: #f00;
+    transition: 0.5s;
+    }
+    /* info */
+
+    .InnerWrap.info .star svg { width: 20px; margin-right: 2.5px;}
+    .InnerWrap.info p { font-size: 1.6rem; }
+
+    .InnerWrap.info .icon { margin: 25px 0;}
+    .InnerWrap.info .icon div{ margin: 30px 20px;}
+    .InnerWrap.info .icon div b {font-size: 1.8rem;}
+    .InnerWrap.info .icon div p {font-size: 1.8rem;}
+
+    .InnerWrap.info .bottom b{ font-size: 2.8rem;}
+    .InnerWrap.info .bottom button { width: 210px;}
+    
+    
+    /* Footer */
+    .footerWrap .imgbox {
+    background: url(../img/Product_Marvel/footer_bg.jpg) no-repeat center /cover;
+    background-attachment: fixed;
+    
+}
+
+    
+}
+
+
+/* PC */
+@media screen and (min-width:1200px){
+
+    .container {display: block;}
+    .VisualWrap {
+        background: url(../img/Product_Marvel/header_bg_1.jpg) no-repeat 50% 0px / cover;
+        background-attachment: fixed;
+    }
+    
+    .panel { width: 33.18%; }
+    .InnerWrap { width: 100%; }  
+    .InnerWrap.current {padding-bottom: 80px;}
+    
+    .InnerWrap .txtbox { width: 75%;}
+    .InnerWrap .txtbox h3 {
+        font-size: 1.8rem;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .InnerWrap .txtbox p {font-size: 1.6rem; line-height: 1.4;}
+    .InnerWrap .btnbox {width: 180px;} 
+    .InnerWrap  button {font-size: 1.6rem; width: 180px; height: 40px;}
+    .InnerWrap .btnbox button:nth-child(1) {margin-right:0;} 
+
+
+    .InnerWrap img { height: 140px;}
+    .InnerWrap #Vulture { margin-left: 20%; }
+    .InnerWrap .like { top: 30px; width: 30px; }
+
+
+
+    /* info */
+    
+    
+    .InnerWrap.info .toggle { top: 30px; width: 30px; }
+     .InnerWrap.info .star { margin-top: 50px; }
+    .InnerWrap.info h3 { font-size: 2rem; line-height: 1.7; margin-top: 8px;}
+
+    .InnerWrap.info .icon { margin: 30px 0;}
+    .InnerWrap.info .icon div{ margin: 25px 13px;}
+    .InnerWrap.info .icon svg { width: 30px; height: 30px;}
+    .InnerWrap.info .icon div b {font-size: 1.5rem;}
+    .InnerWrap.info .icon div p {font-size: 1.6rem;}
+
+    .InnerWrap.info .bottom b{ font-size: 2.4rem; line-height: 1.5;}
+    .InnerWrap.info .bottom button { width: 160px;}
+    
+    
+    
+    
+    /* Footer */
+    .footerWrap .imgbox {
+    background: url(../img/Product_Marvel/footer_bg.jpg) no-repeat center /cover;
+    background-attachment: fixed;
+    
+}
+
+    
+}
