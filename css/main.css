@@ -1,0 +1,127 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* reset */
+body {height: 100%}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+ul,ol {list-style: none;}
+hr {display: none;}
+h1, h2, h3, h4 {margin: 0; color: #1a1a1a;}
+a {text-decoration: none; color: #fff;}
+b {font-weight: 700; display: block; font-size: 1.6rem;}
+p {font-weight: 300; font-size: 1.6rem;}
+img {border: none;}
+html {font-size: 62.5%;}
+body {line-height: 1; font-family: 'Noto Sans KR', sans-serif ;}
+.clear:after {content: ""; clear: both; display: block;}
+.blind {position: absolute; top: -9999px; left: -9999px;}
+.popup {display: none;}
+body::-webkit-scrollbar {width: 0px;} /* 스크롤바 */
+.pagerbox.on::-webkit-scrollbar {width: 0px;} /* 스크롤바 */
+
+/* Moblie common */
+button {width: 160px; height: 40px; border: 1px solid #ffffff; background: transparent; color: #fff; font-size: 1.6rem; font-weight: 500; cursor: pointer; border-radius: 25px;}
+button:hover {background: #fff; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); color: #ff0000;}
+button:hover a{color: #ff0000;}
+.Personal button:hover {color: #8000FF;}
+.Personal button:hover a {color: #8000FF;}
+
+h2 {font-size: 5.6rem; font-weight: 900;}
+h3 {font-size: 2rem; font-weight: 700;}
+
+header {
+    width: 100%;
+    height: 550px;
+    padding: 20%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+}
+.headerWrap {
+    text-align: center;
+}
+.headerWrap >p {
+    font-size: 3.2rem;
+    font-weight: 900;
+    -webkit-text-stroke: #1a1a1a;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: #fff;
+}
+.headerWrap >p >strong {
+    -webkit-text-fill-color: #ff0000;
+}
+
+.headerWrap h1 {
+    margin: 75px auto;
+    width: 170px;
+}
+.headerWrap .header-textbox b {margin-bottom: 15px; font-size: 1.8rem;}
+.headerWrap .header-textbox p {margin-top: 5px;}
+
+#ON .st0{fill:none;}
+#ON .st1{fill:#0000FF;}
+#ON .st2{fill:#00FF00;}
+#ON .st3{opacity:0.3;fill:#009944;}
+#ON .st4{fill:#1D2088;}
+#ON .st5{fill:#00FFFF;}
+#ON .st6{fill:#FF0000;}
+#ON .st7{opacity:0.3;fill:#E60012;}
+#ON .st8{fill:#FF00FF;}
+#ON .st9{fill:#FFFF00;}
+#ON .st10{fill:#FFFFFF;}
+
+section {position: relative; padding: 100px 0 80px;}
+section .titlebox {margin-left: 12% ; line-height: 1.2;}
+section .titlebox h2 {margin-bottom: 10px; letter-spacing: -1px;}
+section .titlebox h3 {margin-bottom: 30px;}
+section .titlebox p {margin-bottom: 5px;}
+section .titlebox strong {font-weight: 700;}
+
+section .imgbox {width: 170px; height:240px; margin: 0 auto;}
+
+section .buttonWrap { margin-top: 20px;}
+section .buttonWrap .buttonbox {height: 40px; display: flex; justify-content: center;}
+section .buttonWrap .buttonbox.popup {display: none;}
+section .buttonWrap .buttonbox a {margin-left: 10px;}
+section .buttonWrap .btn {fill: #fff; width: 40px;}
+section .bottombar {width: 100%; height: 240px; background: #ff0000; position: absolute; bottom: 0; z-index: -1;}
+
+.LEGO .imgbox {
+    background: url(../img/LEGO.png) no-repeat center/cover;
+    margin: 50px auto 20px;
+}
+
+.Personal .imgbox {
+    width: 230px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Personal .bottombar {
+    background:#8000FF
+}
+
+
+/* popup */
+.on {display: block; transition: 1s;}
+section .buttonWrap .buttonbox.popup.on {display: flex;}
+section .buttonWrap .buttonbox.popup.on button:hover {background: #fff;}
+
+section .titlebox.on h2 {color: #fff;}
+section .titlebox.on h3, section .titlebox.on p{display: none;}
+
+section .pagerbox.on {overflow-x:scroll; white-space: nowrap;}
+section .pagerbox.on .pager {display: inline-block; width: auto; padding: 0 15px; margin-left: 3px;}
+section .pagerbox.on .pager:nth-child(1){margin-left: 10%;}
+section .pagerbox.on .pager:last-child{margin-right: 10%;}
+
+section .textbox.on {color: #fff; line-height: 1.3; word-break: break-all; margin: 0 9% 40px;}
+section .textbox.on b {display: inline;}
+
+
+
+
+
+section .bottombar.on {
+    height: 100%;
+}
+
