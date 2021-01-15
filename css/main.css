@@ -114,7 +114,7 @@ section .pagerbox.on .pager {display: inline-block; width: auto; padding: 0 15px
 section .pagerbox.on .pager:nth-child(1){margin-left: 10%;}
 section .pagerbox.on .pager:last-child{margin-right: 10%;}
 
-section .textbox.on {color: #fff; line-height: 1.3; word-break: break-all; margin: 0 9% 40px;}
+section .textbox.on {color: #fff; line-height: 1.3; word-break: break-all; margin: 20px 9% 40px;}
 section .textbox.on b {display: inline;}
 
 
