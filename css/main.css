@@ -167,24 +167,30 @@ section .bottombar.on { height: 100%; transition: .7s;}
  @media screen and (min-width: 1440px){
 
     body {overflow-y: hidden; overflow-x: auto; display: flex; height: 100vh;}
-    h2 {font-size: 7.2rem; font-weight: 900;}
-    h3 {font-size: 2.8rem; font-weight: 700;}
+    h2 {font-size: 8.2vh; font-weight: 900;}
+    h3 {font-size: 3.4vh; font-weight: 700;}
+    p, b {font-size: 2.2vh;}
 
     header {width: 20%; height: 100vh;}
     main {display: flex; width: 80%; height: 100vh;}
-    section {width: 50%; padding: 13vh 0 80px; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);}
+    section {width: 50%; height: 100vh; padding: 10vh 0 80px; box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);}
     
-    section .buttonWrap {margin-top: 60px;}
-    section .imgbox {width: 240px; height:339px; transition: .6s;}
+    section .buttonWrap {margin-top: 6vh;}
+    
+    section .imgbox {width: 22vh; height: 31.1vh; transition: .6s;}
     section .bottombar {height: 33vh;}
 
-    .LEGO .imgbox {margin-top: 16vh;}
-    .Personal .imgbox {width: 310px; margin-top: 16vh;}
+    .LEGO .imgbox {margin-top: 12.8vh;}
+    .Personal .imgbox {width: 30.5vh; height: 27.1vh; margin-top: 6.5vh;}
     
-    section .imgbox.on {margin-top: 12vh; transition: .6s;}
-    section .pagerbox.on {white-space:normal; width: 90%; padding: 0 10%;}
+    section .imgbox.on {margin-top: 5vh; transition: .6s;}
+    section.LEGO .imgbox.on {margin-top: 10vh;}
+    section .pagerbox.on {white-space:normal;  padding: 0 9%;}
+    section .pagerbox.on .pager {font-size: 1.6vh;}
     section .pagerbox.on .pager:nth-child(1){margin-left: 0%; margin-bottom: 10px;;}
     section .pagerbox.on .pager:last-child{margin-right: 0%;}
+    section .textbox.on {margin-top: 0;}
+    section .textbox.on p, section .textbox.on b{font-size: 1.6rem;}
 
 
  } /* min-width_1440 */
