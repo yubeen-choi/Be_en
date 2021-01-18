@@ -35,6 +35,7 @@ $(document).ready(function() {
     } //startshow
 
 
+    
     $(window).scroll(function(){
 
         startShow('.LEGO','.box');
@@ -42,20 +43,22 @@ $(document).ready(function() {
         
     }); //window.scroll
 
-    let winWidth = $(window).width();
+    
+    $(window).ready(function(){
 
-    if(winWidth >= 1440){
+            startShow('.LEGO','.box');
+            startShow('.Personal','.box');
+            
+        });
 
-        $(window).ready(function(){
+    $(window).resize(function(){
 
             startShow('.LEGO','.box');
             startShow('.Personal','.box');
             
         }); //window.scroll
 
-    }else{
-        
-    }
+
 
 
 
