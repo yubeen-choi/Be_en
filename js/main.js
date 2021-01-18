@@ -1,5 +1,7 @@
 $(document).ready(function() {
+
     // alert();
+
     //info toggle
     let current = $('.current');
     let info = $('.info');
@@ -20,6 +22,41 @@ $(document).ready(function() {
 
         
     });
+
+    //startshow
+    function startShow(a,b){
+        let wscroll = $(this).scrollTop();
+        
+        if(wscroll > $(a).offset().top - ($(this).height()/1.3)){
+            $(a).find(b).addClass('show');
+        }else{
+            $(a).find(b).removeClass('show');
+        }
+    } //startshow
+
+
+    $(window).scroll(function(){
+
+        startShow('.LEGO','.box');
+        startShow('.Personal','.box');
+        
+    }); //window.scroll
+
+    let winWidth = $(window).width();
+
+    if(winWidth >= 1440){
+
+        $(window).ready(function(){
+
+            startShow('.LEGO','.box');
+            startShow('.Personal','.box');
+            
+        }); //window.scroll
+
+    }else{
+        
+    }
+
 
 
 
