@@ -1,11 +1,20 @@
 $(document).ready(function() {
-   
-    let options = {
-        videoId : 'MzYYUGnmqLA'
+    
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+    jQuery(document).ready(function($){
+         if(!isMobile) {
+            let options = {
+                videoId : 'MzYYUGnmqLA'
+                
+            };		
         
-    };		
-
-    $('#wrapper').tubular(options);
+            $('#wrapper').tubular(options);
+              //PC
+         } else {
+            $('#wrapper').tubular(options).destroy();  //MOBILE
+         }
+    });
+    
 
     // warning event
     let id = $('#id');
@@ -50,10 +59,10 @@ $(document).ready(function() {
 
 
     //POPUP on
-    let signUp = $('.signup')
+    let forgot = $('.forgot')
     let popup = $('.popup')
 
-    $(signUp).find('a').click(function(e){
+    $(forgot).find('a').click(function(e){
         e.preventDefault();
         $(popup).addClass('on');
     });
