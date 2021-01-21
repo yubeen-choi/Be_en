@@ -1,0 +1,132 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* reset */
+body {overflow: hidden; width: 100%; height: 100%; background: #000; line-height: 1; font-family: 'Noto Sans KR', sans-serif ;}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+h1{margin: 0; color: #fff;}
+a {text-decoration: none; color: #fff;}
+html {font-size: 62.5%;}
+
+ /* 스크롤바 */
+
+
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#wrapper::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .7);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.container {
+    z-index: 2;
+    text-align: center;
+}
+
+h1 {
+    width: 120px;
+    margin: 0 auto 40px;
+}
+
+h1 a {
+    fill: #fff;
+}
+
+h2 {
+    color: #fff;
+    font-size: 3.8rem;
+    text-transform: uppercase;
+}
+
+form {
+    width: 300px;
+    margin: 50px 0 0;
+}
+
+form div{margin: 10px 0;}
+form .inputbox {position: relative;}
+
+form input {
+    width: 300px;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 0.75px solid #fff;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 100;
+    outline: none;
+}
+
+form label {
+    position: absolute;
+    top: 20px; left: 10px;
+    font-size: 1.4rem;
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 200;
+    transition: top .2s;
+}
+
+form label.warning {
+    color:#f00 !important;
+    animation: warning 0.2s ease;
+    animation-iteration-count: 3;
+}
+
+@keyframes warning {
+    0% {transform: translateX(-3px);}
+    25% {transform: translateX(3px);}
+    50% {transform: translateX(-3px);}
+    75% {transform: translateX(3px);}
+}
+
+form input:focus + label, form input:valid + label {
+    top:5px;
+    font-size: 1rem;
+    color: #ff6600;
+    font-weight: 500;
+}
+
+form .btn button {
+    width: 300px;
+    height: 50px;
+    margin: 20px 0 10px;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000;
+    border-radius: 25px;
+    border: 0.75px solid #fff;
+    background: #fff;
+    cursor: pointer;
+}
+
+form .btn button:hover {
+    background: #f37221;
+    color:  #fff;
+    border: #ff6600;
+}
+
+.caption > div {
+    margin: 15px 0 0;
+}
+
+.caption a {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+

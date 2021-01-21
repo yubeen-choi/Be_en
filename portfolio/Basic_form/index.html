@@ -16,30 +16,44 @@
 <body>
     <section id="wrapper">
         <div class="container">
-            <h1>sign up</h1>
-            <form action="">
-                <div class="id" id="id">
-                    <input type="text">
-                    <label for="id"></label>
+            <h1>
+                <a href="">
+                    <svg id="Logo" viewBox="0 0 557.5 204.3">
+                        <g>
+                            <path class="st0" d="M73.2,11.5c-36,42.2-70.5,94.6-70.8,133.8C2.3,160,7,172.9,18.2,182.6c16.2,14,34.1,19,51.9,19
+                                c26,0,51.8-10.5,72.1-18.5C176.3,169.4,552.8,5.9,552.8,5.9c3.6-1.8,3-4.1-1.6-3c-1.8,0.5-409.9,111-409.9,111
+                                c-7.9,2.2-15.9,3.4-23.8,3.4c-31.4,0.2-59.3-17.2-59-53.9C58.6,49.2,63,31.8,73.2,11.5L73.2,11.5z"/>
+                        </g>
+                    </a>
+                </svg>
+            </h1>
+            <h2>Sign in</h2>
+            
+            <form action="#" method="post">
+                <div class="inputbox">
+                    <input type="text" id="id"  name="id" autocomplete="off" required>
+                    <label for="id">user name</label>
                 </div>
 
-                <div class="password" id="pw">
-                    <input type="text">
-                    <label for="pw"></label>
+                <div class="inputbox">
+                    <input type="password" id="pw" name="pw" autocomplete="off" required>
+                    <label for="pw">password</label>
                 </div>
 
                 <div class="btn">
-                    <button>sign up</button>
+                    <button type="submit" id="btn">sign in</button>
+                </div>
+
+            </form>
+            <div class="caption">
+                <div class="signup">
+                    <a href="#">Sign up</a>
                 </div>
 
                 <div class="forgot">
                     <a href="#">Forgot password?</a>
                 </div>
-
-                <div class="signIn">
-                    <a href="#">sign in</a>
-                </div>
-            </form>
+            </div>
         </div>
     </section>
         
