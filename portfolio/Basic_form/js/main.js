@@ -71,8 +71,6 @@ $(document).ready(function() {
         $(popup).addClass('on');
     });
 
-    
-
     popup.click(function(){
         $(popup).removeClass('on');
     });

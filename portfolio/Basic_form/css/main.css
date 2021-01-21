@@ -147,10 +147,11 @@ form .btn button {
 }
 
 .popup.on .layer{
-    width: 80%; height: 420px;
+    width: 80%;
+    max-width: 350px; height: 420px;
     background: #fff;
     border-radius: 15px;
-    padding: 15% 8%;
+    padding: 60px 32px;
 }
 
 .popup.on .layer h2 {
@@ -203,3 +204,4 @@ form .btn button {
 .popup .layer .caption a {
     color:#ff6600;
 }
+ 
