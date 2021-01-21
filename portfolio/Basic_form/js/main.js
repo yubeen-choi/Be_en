@@ -15,6 +15,7 @@ $(document).ready(function() {
             webTubular();
               //PC
          } else {
+            $('#wrapper').addClass('moblie');
             webTubular.destroy();  //MOBILE
          }
     }); //webTubular_media
@@ -69,15 +70,20 @@ $(document).ready(function() {
     $(forgot).find('a').click(function(e){
         e.preventDefault();
         $(popup).addClass('on');
-    });
+    });// POPUP on
 
-    popup.click(function(){
-        $(popup).removeClass('on');
-    });
-    // POPUP on
+
+    //POPUP off
+    $(document).click(function(event) {
+
+        if (!$(event.target).closest(".layer, .container").length) {
+          $("body").find(".popup").removeClass("on");
+        }
+      });// POPUP off
+
+
+
     
-
-
     
 }); //$(function)
 

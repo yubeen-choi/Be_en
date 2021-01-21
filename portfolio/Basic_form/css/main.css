@@ -8,7 +8,6 @@ h1{margin: 0; color: #fff;}
 a {text-decoration: none; color: #fff;}
 html {font-size: 62.5%;}
 
- /* 스크롤바 */
 
 
 #wrapper {
@@ -29,6 +28,11 @@ html {font-size: 62.5%;}
     left: 0;
     z-index: 1;
 }
+
+#wrapper.moblie {
+    background: url(../img/bg.jpg) no-repeat center/cover;
+}
+#wrapper.moblie::after {background: rgba(0, 0, 0, .4); transition: 3s;}
 
 .container {
     z-index: 2;
@@ -121,7 +125,7 @@ form .btn button {
 }
 
 .caption > div {
-    margin: 15px 0 0;
+    margin: 20px 0 0;
 }
 
 .caption a {
@@ -129,6 +133,8 @@ form .btn button {
     font-size: 1.3rem;
     font-weight: 500;
 }
+
+.caption a:hover {color: #ff6600;}
 
 .popup {
     display: none;
