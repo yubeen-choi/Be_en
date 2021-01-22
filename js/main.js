@@ -40,6 +40,7 @@ $(document).ready(function() {
 
         startShow('.LEGO','.box');
         startShow('.Personal','.box');
+        startShow('.basicform','.box');
         
     }); //window.scroll
 
@@ -48,6 +49,7 @@ $(document).ready(function() {
 
             startShow('.LEGO','.box');
             startShow('.Personal','.box');
+            startShow('.basicform','.box');
             
         });
 
@@ -55,6 +57,7 @@ $(document).ready(function() {
 
             startShow('.LEGO','.box');
             startShow('.Personal','.box');
+            startShow('.basicform','.box');
             
         }); //window.scroll
 
