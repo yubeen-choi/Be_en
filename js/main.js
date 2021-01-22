@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     // alert();
+    
 
     //info toggle
     let current = $('.current');
