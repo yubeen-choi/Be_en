@@ -1,14 +1,15 @@
 // 1. Use strict
-// 2. added in ES 5
-// 3. Use thid for Valina Javascript
-// 4. 스크립트 문법을 엄격하게 적용하여 잠재적 오류도 발생시킨다 빡코딩연습가능
+// - added in ES 5
+// - Use thid for Valina Javascript
+// - 스크립트 문법을 엄격하게 적용하여 잠재적 오류도 발생시킨다 빡코딩연습가능
 
 'use strict';
 
 
 
 // 2. Variable, rw(read/write)
-// 메모리의 값을 읽고 쓰는게 가능함
+// :메모리의 값을 읽고 쓰는게 가능함
+
 // let (added in ES6) 변수 선언
 
 let globalName = 'global name';
@@ -20,13 +21,12 @@ let globalName = 'global name';
     console.log(name);
     console.log(globalName);
 }
-
-//console.log(name); let은 블록 안에서 선언될 경우 밖에서 호출 불가
+// - console.log(name); let은 블록 안에서 선언될 경우 밖에서 호출 불가
 console.log(globalName);
 
 // var (don't ever use this!) 
-// var hoisting- 선언위치에 상관없이 항상 젤 위로 선언을 끌어 올려줌
-// var has no block scope 블록을 이용하여 변수를 선언하여도 무시함
+// - var hoisting :선언위치에 상관없이 항상 젤 위로 선언을 끌어 올려줌
+// - var has no block scope :블록을 이용하여 변수를 선언하여도 무시함
 {
     age = 4;
     var age;
@@ -36,19 +36,19 @@ console.log(age);
 
 
 // 3. constant r(read only)
-// use const whenever possible.
-// only use let if variable needs to change.
-// const로 값을 선언 한 후에는 읽기만 가능하며 다른 값으로 변경 불가
+// - use const whenever possible.
+// - only use let if variable needs to change.
+// - const로 값을 선언 한 후에는 읽기만 가능하며 다른 값으로 변경 불가
 const daysInWeek = 7;
 const maxNumber = 5;
 
 // note!
 // Immutable date types: primitive types, frozen objects (i.e. object.freeze())
-// 데이터 자체를 변경 할 수 없는 데이터 타입.
+// :데이터 자체를 변경 할 수 없는 데이터 타입.
 // ex) 'ellie'에서 아예 다른 'ellee'로 변경 내부에 있는 문자를 수정하는것은 불가
 
 // mutable date types: all objects by default are mutable in JS 
-// 변경이 가능한 데이터 타입 - object
+// :변경이 가능한 데이터 타입 - object
 
 
 // favor immutable data type always for a few reasons; 왠만하면 한번 작성한 값을 변경X
