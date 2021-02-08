@@ -51,7 +51,7 @@ const maxNumber = 5;
 // :변경이 가능한 데이터 타입 - object
 
 
-// favor immutable data type always for a few reasons; 왠만하면 한번 작성한 값을 변경X
+// favor immutable data type always for a few reasons; :왠만하면 한번 작성한 값을 변경X
 // - security 보안상의 이유- 다른 작성자에 의해 변경되는것을 방지
 // - thread safety 동시에 값을 변경하는것을 방지
 // - reduce haman mistakes 나중에 코드를 변경할때 실수 방지
@@ -60,18 +60,19 @@ const maxNumber = 5;
 
 // 4. Variable type
 // primitive, single itme: Number, string, boolean, null, undefined, symbol
-// - 더이상 작은 단위로 나눠지지 않는 하나의 작은 아이템
-// 값 자체가 메모리에 저장됌
+// :더이상 작은 단위로 나눠지지 않는 하나의 작은 아이템
+// :값 자체가 메모리에 저장됌
 
 // object, box container
-// - 여러개의 싱글 아이템을 한 단위, 한 박스로 나눠서 관리할 수 있도록 해줌
-// 오브젝트를 가르키는 레퍼런스가 메모리에 저장됌
+// :여러개의 싱글 아이템을 한 단위, 한 박스로 나눠서 관리할 수 있도록 해줌
+// :오브젝트를 가르키는 레퍼런스가 메모리에 저장됌 
+// :- object < ref < Number, string, boolean, null, undefined, symbol...
 
 // function, first-class function
 //  - 데이터 타입 중 하나. 변수에 할당이 가능함
 
 // primitive
-// - number 숫자를 담는 데이터 타입
+// - number :숫자를 담는 데이터 타입
 
 const count = 17; //integer (정수)
 const size = 17.1; //decimal number (소숫점의 숫자)
@@ -82,15 +83,15 @@ console.log(`value: ${size}, type: ${typeof size}`);
 //number - speicla numberic values: infinity, -infinity, NaN
 // 연산할때 연산 가능한 숫자값이 나오는지 확인할때 쓰일 수 있음
 
-const infinity = 1 / 0; //숫자를 0으로 나눴을때 -무한대의 숫자값
-const negativeInfinity = -1 / 0;  //-숫자를 0으로 나눴을때 -무한대의 숫자값
-const nAn = 'not a number' / 2;
+const infinity = 1 / 0; //숫자를 0으로 나눴을때 :무한대의 숫자값
+const negativeInfinity = -1 / 0;  //-숫자를 0으로 나눴을때 :무한대의 -숫자값
+const nAn = 'not a number' / 2; // 숫자 x
 
 console.log(infinity);
 console.log(negativeInfinity);
 console.log(nAn);
 
-// - string -문자를 담는 데이터 타입
+// - string :문자를 담는 데이터 타입
 
 const char = 'c';
 const brendan = 'brendan';
@@ -104,7 +105,7 @@ const helloBob = `hi ${brendan}!`; //template literals (string)
 console.log(`value: ${helloBob}, type: ${typeof helloBob}`);
 console.log('value: ' + helloBob + 'type: ' + typeof helloBob);// `` 기호를 사용 하지 않을 경우 사용 - space가 무시되어 나타남
 
-// - boolean -참과 거짓을 나타내는 데이터 타입
+// - boolean :참과 거짓을 나타내는 데이터 타입
 // false: 0, null, undefined, NaN, ''(비어있는 string)
 // true: any other value
 
@@ -114,15 +115,15 @@ const test = 3 < 1; //false
 console.log(`value: ${canRead}, type: ${typeof canRead}`);
 console.log(`value: ${test}, type: ${typeof test}`);
 
-// - null - 값이 비어있다고 지정해주는 경우
+// - null :값이 비어있다고 지정해주는 경우
 let nothing = null;
 console.log(`value: ${nothing}, type: ${typeof nothing}`);
 
-// - undefined - 선언은 되었지만 아무 값이 없는 경우
+// - undefined :선언은 되었지만 아무 값이 없는 경우
 let X;
 console.log(`value: ${X}, type: ${typeof X}`);
 
-// - symbol - 고유한 식별자가 필요할때 사용하는 데이터 타입
+// - symbol :고유한 식별자가 필요할때 사용하는 데이터 타입
 const symbol1 = Symbol('id');
 const symbol2 = Symbol('id');
 
@@ -132,20 +133,21 @@ console.log(symbol1 === symbol2);
 
 const gSymbol1 = Symbol.for('id');
 const gSymbol2 = Symbol.for('id');
+// 같은 값으로 동일한 symbol을 만들고 싶을때 사용
 
 console.log(gSymbol1 === gSymbol2); //true
-// 같은 값으로 동일한 symbol을 만들고 싶을때 사용
+
 
 console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
 //console.log(`value: ${symbol1}, type: ${typeof symbol1}`);
 //symbol은 .description 사용하여 호출하지 않으면 오류가 뜸
 
-// - object - 물건과 물체들을 대표 할 수 있는 박스 형태
+// - object :물건과 물체들을 대표 할 수 있는 박스 형태
 const ellie = { name: 'ellie', age: 20 };
 
 
 // 5. Dynamic typing
-// dynamically typed language - 변수를 선언할때 어떤 타입인지 선언하지 않고 프로그램이 동작할때 할당된 값에 따라 타입이 변경 될 수 있음
+// dynamically typed language :변수를 선언할때 어떤 타입인지 선언하지 않고 프로그램이 동작할때 할당된 값에 따라 타입이 변경 될 수 있음
 
 let text ='hello';
 console.log(text.charAt(0)); //h
