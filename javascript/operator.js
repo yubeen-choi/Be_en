@@ -1,3 +1,5 @@
+'use strict';
+
 // 1. String concatenation
 console.log('my' + 'cat'); //'문자' + '문자'
 console.log('1' + 2); // '문자' + 숫자 = 숫자가 문자로 변경
@@ -114,12 +116,12 @@ console.log(ellie1 == ellie2);
 console.log(ellie1 === ellie2);
 // 같은 데이터가 저장되어있지만 오브젝트는 레퍼런스타입으로 저장되기 때문에 false
 console.log(ellie1 === ellie3);
-// 오븍젝트 자체를 할당받았기 때문에 true
+// 오브젝트 자체를 할당받았기 때문에 true
 
 // equality - puzzler
 console.log(0 == false);  // true  -0, null, undefined 은 true로 간주됌
 console.log(0 === false); // false -0은 참과 거짓을 나타내는 boolean 데이터 타입이 아니기 때문
-console.log('' === false); // true
+console.log('' == false); // true
 console.log('' === false); // false -참과 거짓을 나타내는 boolean 데이터 타입이 아니기 때문
 console.log(null == undefined); // true
 console.log(null === undefined); // false -다른 데이터 타입
